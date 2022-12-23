@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Networth.LiabilitiesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Networth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Syncfusion.UI.Xaml.Grid"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Custom:SfDataGrid x:Name="LiabilitiesGrid" HorizontalAlignment="Left" Height="1012" SelectionMode="Single" VerticalAlignment="Top" Width="1920" ItemsSource="{x:Bind Path=liabilities}" AutoGeneratingColumn="LiabilitiesGrid_AutoGeneratingColumn" Margin="0,68,0,0" CurrentCellEndEdit="LiabilitiesGrid_CurrentCellEndEdit" DataContextChanged="LiabilitiesGrid_DataContextChanged" CurrentCellValueChanged="LiabilitiesGrid_CurrentCellValueChanged"/>
+        <AppBarButton x:Name="NewLoanButton" Icon="Add" Label="Add New Loan" HorizontalAlignment="Left" Height="68" Margin="0,0,272,0" Width="68" Click="NewLoanButton_Click"/>
+        <Rectangle Width="1" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,14,272,0" Fill="White"/>
+        <AppBarButton x:Name="RemoveLoanButton" Icon="Delete" Label="Remove Loan" HorizontalAlignment="Left" Height="68" Width="72" Margin="74,0,204,0" Click="RemoveLoanButton_Click"/>
+    </Grid>
+</Page>

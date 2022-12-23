@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <Source>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</Source>
+    <SmallTileSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</SmallTileSource>
+    <MediumTileSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</MediumTileSource>
+    <WideTileSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</WideTileSource>
+    <LargeTileSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</LargeTileSource>
+    <AppIconSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</AppIconSource>
+    <SplashScreenSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</SplashScreenSource>
+    <PackageLogoSource>D:\Computer Programming\Programs\C#\Networth\Networth\Assets\Logo.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>

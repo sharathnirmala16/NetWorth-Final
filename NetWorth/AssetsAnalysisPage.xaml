@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Networth.AssetsAnalysisPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Networth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <AppBarButton x:Name="ReloadButton" Icon="Refresh" Label="Reload Graphs" HorizontalAlignment="Left" Height="68" Margin="0,0,272,0" Width="68" Click="ReloadButton_Click"/>
+        <Image x:Name="DistributionChart5" Stretch="Uniform" Margin="960,405,0,0" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="960"/>
+        <Image x:Name="DistributionChart4" Stretch="Uniform" Margin="960,68,0,0" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="960"/>
+        <Image x:Name="DistributionChart6" Stretch="Uniform" Margin="960,742,0,0" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="960"/>
+        <Image x:Name="DistributionChart2" Stretch="Uniform" Margin="0,574,0,0" HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="960"/>
+        <Image x:Name="DistributionChart1" Stretch="Uniform" Margin="0,68,0,0" HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="960"/>
+    </Grid>
+</Page>

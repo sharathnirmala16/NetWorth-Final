@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Networth.NetWorthPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Networth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Syncfusion.UI.Xaml.Grid"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Custom:SfDataGrid x:Name="NetWorthGrid" AllowEditing="False" HorizontalAlignment="Left" Height="506" SelectionMode="Single" VerticalAlignment="Top" Width="760" ItemsSource="{x:Bind Path=netWorthComponents}" AutoGeneratingColumn="NetWorthGrid_AutoGeneratingColumn" Margin="0,68,0,0" CurrentCellValueChanged="NetWorthGrid_CurrentCellValueChanged"/>
+        <Image x:Name="DistributionChart1" Stretch="Uniform" Margin="760,68,0,0" HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="960"/>
+        <Image x:Name="DistributionChart2" Stretch="Uniform" Margin="760,574,0,0" HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="960"/>
+        <AppBarButton x:Name="ReloadButton" Icon="Refresh" Label="Reload Data" HorizontalAlignment="Left" Height="68" Margin="0,0,272,0" Width="68" Click="ReloadButton_Click"/>
+        <TextBlock x:Name="TotalWorthLabel" HorizontalAlignment="Left" Margin="20,600,0,0" TextWrapping="Wrap" FontSize="48" Text="Total Worth = Rs." VerticalAlignment="Top"/>
+        <TextBlock x:Name="NetWorthLabel" HorizontalAlignment="Left" Margin="20,660,0,0" TextWrapping="Wrap" FontSize="48" Text="Net Worth = Rs." VerticalAlignment="Top"/>
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Networth.SpendingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Networth"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Syncfusion.UI.Xaml.Grid"
+    xmlns:Custom1="using:Syncfusion.UI.Xaml.Controls.Input"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Custom:SfDataGrid x:Name="TransactionsGrid" HorizontalAlignment="Left" Height="1012" SelectionMode="Single" VerticalAlignment="Top" Width="1920" ItemsSource="{x:Bind Path=transactions}" AutoGeneratingColumn="TransactionsGrid_AutoGeneratingColumn" Margin="0,68,0,0" CurrentCellEndEdit="TransactionsGrid_CurrentCellEndEdit" DataContextChanged="TransactionsGrid_DataContextChanged" CurrentCellValueChanged="TransactionsGrid_CurrentCellValueChanged"/>
+        <AppBarButton x:Name="NewTransactionButton" Icon="Add" Label="Add New Transaction" HorizontalAlignment="Left" Height="68" Margin="0,0,272,0" Width="68" Click="NewTransactionButton_Click"/>
+        <Rectangle Width="1" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,14,272,0" Fill="White"/>
+        <AppBarButton x:Name="RemoveTransactionButton" Icon="Delete" Label="Remove Transaction" HorizontalAlignment="Left" Height="68" Width="72" Margin="74,0,204,0" Click="RemoveTransactionButton_Click"/>
+    </Grid>
+</Page>

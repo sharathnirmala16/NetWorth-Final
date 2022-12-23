@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllAssetsDistributionQuery" xml:space="preserve">
+    <value>SELECT Category, (Total_Value * 100 / (SELECT SUM(Total_Value) FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r))) AS 'Percentage' FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r) GROUP BY Category</value>
+  </data>
+  <data name="CityDistributionQuery" xml:space="preserve">
+    <value>SELECT DISTINCT(UPPER(City)) AS 'City', (SUM(ClosePrice) * 100 / (SELECT SUM(ClosePrice) FROM RealEstates)) AS 'Percentage' FROM RealEstates GROUP BY City</value>
+  </data>
+  <data name="CreateFinancialAssetsTableCommand" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS FinancialAssets (AssetID TEXT, Category TEXT NOT NULL, Name TEXT NOT NULL, Shares INTEGER NOT NULL, OpenDate TEXT NOT NULL, OpenPrice REAL NOT NULL, CloseDate TEXT NOT NULL, ClosePrice REAL NOT NULL, IsClosed INTEGER NOT NULL, PRIMARY KEY(AssetID))</value>
+  </data>
+  <data name="CreateLiabilitiesTableCommand" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS Liabilities(LoanID TEXT, LoanName TEXT NOT NULL, PrincipleAmount REAL NOT NULL, Interest REAL NOT NULL, OpenDate TEXT NOT NULL, AmountRemaining REAL NOT NULL, CloseDate TEXT NOT NULL, PRIMARY KEY(LoanID))</value>
+  </data>
+  <data name="CreateRealEstatesTableCommand" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS RealEstates(EstateID TEXT, EstateName TEXT NOT NULL,  City TEXT NOT NULL, Type TEXT NOT NULL, Size REAL NOT NULL, OpenDate TEXT NOT NULL, OpenPrice REAL NOT NULL, CloseDate TEXT NOT NULL, ClosePrice REAL NOT NULL, IsClosed INTEGER NOT NULL, PRIMARY KEY(EstateID))</value>
+  </data>
+  <data name="CreateSpendingTableCommand" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS Spending(TransactionID TEXT, Credit TEXT NOT NULL, Amount REAL NOT NULL, Purpose TEXT NOT NULL, Date TEXT NOT NULL, PRIMARY KEY(TransactionID))</value>
+  </data>
+  <data name="CreditDebitDistributionQuery" xml:space="preserve">
+    <value>SELECT Credit, (SUM(Amount) * 100 / (Select SUM(Amount) from Spending)) AS 'Percentage' FROM Spending GROUP BY Credit</value>
+  </data>
+  <data name="EstateDistributionQuery" xml:space="preserve">
+    <value>SELECT EstateName, (ClosePrice * 100 / (SELECT SUM(ClosePrice) FROM RealEstates)) AS 'Percentage' FROM RealEstates</value>
+  </data>
+  <data name="EstateUnitValueQuery" xml:space="preserve">
+    <value>SELECT EstateName, (ClosePrice / Size) AS 'Price per Unit Area' from RealEstates</value>
+  </data>
+  <data name="LoanBarChartQuery" xml:space="preserve">
+    <value>SELECT LoanName, Interest, AmountRemaining from Liabilities</value>
+  </data>
+  <data name="LoanTypeDistributionQuery" xml:space="preserve">
+    <value>SELECT DISTINCT(UPPER(LoanName)) AS 'Category', (SUM(AmountRemaining) * 100 / (SELECT SUM(AmountRemaining) FROM Liabilities)) AS 'Percentage' FROM Liabilities GROUP BY LoanName</value>
+  </data>
+  <data name="NetWorthDistributionQuery" xml:space="preserve">
+    <value>SELECT Category, (TotalValue * 100 / (SELECT SUM(TotalValue) FROM (SELECT Category, Total_Value AS 'TotalValue' FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r) GROUP BY Category))) AS 'Percentage' FROM (SELECT Category, Total_Value AS 'TotalValue' FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r) GROUP BY Category) GROUP BY Category ORDER BY TotalValue DESC</value>
+  </data>
+  <data name="NetWorthQuery" xml:space="preserve">
+    <value>SELECT Category, Total_Value AS 'TotalValue' FROM (SELECT Category, Total_Value FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r UNION SELECT 'Liabilities' AS 'Category', SUM(l.AmountRemaining) AS 'Total_Value' FROM Liabilities l) GROUP BY Category) ORDER BY TotalValue DESC</value>
+  </data>
+  <data name="SFRL" xml:space="preserve">
+    <value>NzM5Mjc2QDMyMzAyZTMzMmUzMEdDNGN1V0JBRWVQUGVRZENERnBSalQ5VS9iTC9yeEMxS2RHMXFoMHhIMDA9</value>
+  </data>
+  <data name="SpendingDistributionQuery" xml:space="preserve">
+    <value>SELECT DISTINCT(UPPER(Purpose)) AS 'Category', (SUM(Amount) * 100 / (SELECT SUM(Amount) FROM Spending WHERE Credit != 'Credit')) AS Percentage FROM Spending WHERE Credit != 'Credit' GROUP BY Purpose</value>
+  </data>
+  <data name="TotalWorthDistributionQuery" xml:space="preserve">
+    <value>SELECT Category, (TotalValue * 100 / (SELECT SUM(TotalValue) FROM (SELECT Category, Total_Value AS 'TotalValue' FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r UNION SELECT 'Liabilities' AS 'Category', SUM(l.AmountRemaining) AS 'Total_Value' FROM Liabilities l) GROUP BY Category))) AS 'Percentage' FROM (SELECT Category, Total_Value AS 'TotalValue' FROM (SELECT f.Category, SUM(f.Shares * f.ClosePrice) AS 'Total_Value' FROM FinancialAssets f GROUP BY f.Category UNION SELECT 'Real Estate' AS 'Category', SUM(r.ClosePrice) AS 'Total_Value' FROM RealEstates r UNION SELECT 'Liabilities' AS 'Category', SUM(l.AmountRemaining) AS 'Total_Value' FROM Liabilities l) GROUP BY Category) GROUP BY Category ORDER BY TotalValue DESC</value>
+  </data>
+</root>
